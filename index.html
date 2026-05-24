@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LENS & CANVAS | Art & Cinema Club</title>
+    <meta name="description" content="University Art & Cinema Club - Where creativity meets the big screen.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #9b1c2c;
+            --secondary: #1e3a8a;
+            --accent: #f4a261;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: #333;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        .hero {
+            height: 100vh;
+            min-height: 650px;
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
+                        url('/img/1b10a8b568bdea69862acdfbcbe4819d.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            color: white;
+            position: relative;
+        }
+        
+        .club-badge {
+            background: var(--primary);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .film-strip {
+            background: repeating-linear-gradient(
+                90deg,
+                #111,
+                #111 20px,
+                #ddd 20px,
+                #ddd 25px
+            );
+            height: 4px;
+            margin: 30px 0;
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar">
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="#">LENS & CANVAS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#art">Art</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#movies">Movies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#join">Join Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="container position-relative z-3">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-10">
+                    <span class="club-badge">EST. 2024 • UNIVERSITY CLUB</span>
+                    <h1 class="display-3 fw-bold mb-3">LENS & CANVAS</h1>
+                    <p class="lead fs-3 mb-4">Where Art Meets Cinema</p>
+                    <p class="fs-5 opacity-90 mb-5">A creative space for university students passionate about visual arts, filmmaking, photography, and the magic of movies.</p>
+                    
+                    <a href="#join" class="btn btn-lg px-5 py-3 rounded-pill me-3" style="background: var(--primary); color: white; border: none;">
+                        <i class="fas fa-users me-2"></i> Join the Club
+                    </a>
+                    <a href="#events" class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill">
+                        <i class="fas fa-calendar-alt me-2"></i> Upcoming Events
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="position-absolute bottom-0 start-50 translate-middle-x mb-5 text-center">
+            <i class="fas fa-chevron-down fa-2x opacity-75" style="animation: bounce 2s infinite;"></i>
+        </div>
+    </section>
+
+    <!-- LATEST FEATURES -->
+    <section id="features" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5 fs-1">This Month's Highlights</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card card-hover border-0 shadow h-100">
+                        <img src="/img/28 (158).jpg" class="card-img-top" alt="Art">
+                        <div class="card-body">
+                            <span class="badge bg-danger mb-2">Art Spotlight</span>
+                            <h5 class="card-title">The Silent Rebellion: Student Protest Art Exhibition</h5>
+                            <p class="card-text text-muted">Our members explore social issues through powerful visual storytelling.</p>
+                            <small class="text-muted">By Aylin Demir • 3 days ago</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-hover border-0 shadow h-100">
+                        <img src="https://source.unsplash.com/600x400/?film,cinema" class="card-img-top" alt="Movie">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Movie Review</span>
+                            <h5 class="card-title">“Dune: Part Two” – A Visual Masterpiece Worthy of the Big Screen</h5>
+                            <p class="card-text text-muted">Our club’s take on Denis Villeneuve’s latest cinematic achievement.</p>
+                            <small class="text-muted">By Kerem Yılmaz • 1 week ago</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-hover border-0 shadow h-100">
+                        <img src="https://source.unsplash.com/600x400/?photography,street" class="card-img-top" alt="Photo">
+                        <div class="card-body">
+                            <span class="badge bg-warning text-dark mb-2">Photography</span>
+                            <h5 class="card-title">Campus Through Our Lens – Student Photo Contest Winners</h5>
+                            <p class="card-text text-muted">The most creative shots from our monthly photography challenge.</p>
+                            <small class="text-muted">Club Gallery • 2 weeks ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ART SECTION -->
+    <section id="art" class="py-5">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6">
+                    <h2 class="section-title fs-1">Art Corner</h2>
+                    <p class="lead">Student artists pushing boundaries with paint, digital, sculpture, and more.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="#" class="btn btn-outline-dark rounded-pill">View All Art →</a>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <!-- You can duplicate these cards -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card card-hover border-0 shadow">
+                        <img src="https://source.unsplash.com/400x500/?oil-painting" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h6 class="fw-bold">“Fractured Reality”</h6>
+                            <p class="text-muted small">by Elif Kaya • Digital Mixed Media</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card card-hover border-0 shadow">
+                        <img src="https://source.unsplash.com/400x500/?street-art" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h6 class="fw-bold">Campus Mural Project 2025</h6>
+                            <p class="text-muted small">Collective Work • 12 artists</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- PDF BLOGS / MAGAZINE ISSUES SECTION -->
+<section id="pdf-blogs" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center mb-5 fs-1">Magazine & Blog Issues</h2>
+        <p class="lead text-center mb-5">Read our latest student-written articles, festival recaps, and film reviews as beautiful PDFs.</p>
+
+        <div class="row g-4">
+
+            <!-- Issue 03 - Student Film Festival Special -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card card-hover border-0 shadow h-100">
+                    <div class="position-relative">
+                        <img src="/img/28 (158).jpg" class="card-img-top" alt="Issue 03 Cover">
+                        <span class="badge bg-primary position-absolute top-0 start-0 m-3">April 2026</span>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Issue #03 – Student Film Festival Special</h5>
+                        <p class="card-text text-muted flex-grow-1">In-depth reviews from our campus festival + interviews with young filmmakers.</p>
+                        
+                        <div class="d-flex gap-2 mt-auto">
+                            <button onclick="showPdfModal('pdfs/issue03.pdf')" class="btn btn-outline-primary flex-fill">
+                                <i class="fas fa-eye"></i> Preview
+                            </button>
+                            <a href="pdfs/issue03.pdf" download class="btn btn-primary flex-fill">
+                                <i class="fas fa-download"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Issue 02 - Art & Cinema Fusion -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card card-hover border-0 shadow h-100">
+                    <div class="position-relative">
+                        <img src="/img/28 (158).jpg" class="card-img-top" alt="Issue 02 Cover">
+                        <span class="badge bg-danger position-absolute top-0 start-0 m-3">March 2026</span>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Issue #02 – Art & Cinema Fusion</h5>
+                        <p class="card-text text-muted flex-grow-1">How visual artists are influencing modern filmmaking.</p>
+                        <div class="d-flex gap-2 mt-auto">
+                            <button onclick="showPdfModal('pdf/blade runner raw.pdf')" class="btn btn-outline-primary flex-fill">
+                                <i class="fas fa-eye"></i> Preview
+                            </button>
+                            <a href="pdf/blade runner raw.pdf" download class="btn btn-primary flex-fill">
+                                <i class="fas fa-download"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more issues here following the same pattern -->
+
+        </div>
+    </div>
+</section>
+
+    <div class="film-strip"></div>
+
+    <!-- MOVIES SECTION -->
+    <section id="movies" class="py-5 bg-dark text-white">
+        <div class="container">
+            <h2 class="section-title text-white fs-1 mb-5">Cinema Club Picks</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card bg-transparent border-0 text-white card-hover">
+                        <img src="https://source.unsplash.com/600x350/?movie-poster,parasite" class="rounded-3" alt="">
+                        <div class="mt-3">
+                            <h5>Parasite (2019) – Class & Society Discussion</h5>
+                            <p class="small opacity-75">Screening + Panel • March 28</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card bg-transparent border-0 text-white card-hover">
+                        <img src="/img/28 (158).jpg" class="rounded-3" alt="">
+                        <div class="mt-3">
+                            <h5>Everything Everywhere All at Once</h5>
+                            <p class="small opacity-75">Multiverse & Identity Night</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EVENTS -->
+    <section id="events" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center fs-1 mb-5">Upcoming Events</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="border p-4 rounded-3 card-hover">
+                        <h5 class="fw-bold">Art & Film Fusion Night</h5>
+                        <p class="text-muted">April 25 • 19:00 • Student Center Hall</p>
+                        <p>Live painting while watching cult classics. Bring your sketchbook!</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="border p-4 rounded-3 card-hover">
+                        <h5 class="fw-bold">Short Film Festival Submissions Open</h5>
+                        <p class="text-muted">Deadline: May 10</p>
+                        <p>Submit your 5–15 minute films. Best ones will be screened on campus.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JOIN US -->
+    <section id="join" class="py-5 bg-primary text-white">
+        <div class="container text-center">
+            <h2 class="display-5 fw-bold mb-4">Become Part of the Story</h2>
+            <p class="lead mb-5 col-lg-8 mx-auto">
+                Whether you paint, shoot photos, make films, write reviews, or just love art & cinema — 
+                there’s a place for you at Lens & Canvas.
+            </p>
+            <a href="#" class="btn btn-light btn-lg px-5 py-3 rounded-pill fs-5">
+                <i class="fas fa-handshake me-2"></i> Join the Club Now
+            </a>
+            <p class="mt-4 opacity-75">Open to all university students • No experience required</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 class="fw-bold">LENS & CANVAS</h4>
+                    <p class="opacity-75">University Art & Cinema Club</p>
+                    <p class="small opacity-50">© 2026 – Made with passion by students, for students.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-1">Follow us on Instagram: <strong>@lensandcanvasuni</strong></p>
+                    <p class="small opacity-75">Contact: lensandcanvas@uni.edu.tr</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- PDF Preview Modal -->
+    <div class="modal fade" id="pdfModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold" id="pdfModalTitle">Reading PDF Issue</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0" style="height: 85vh; background:#f8f9fa;">
+                    <iframe id="pdfFrame" src="" width="100%" height="100%" style="border: none;"></iframe>
+                </div>
+                <div class="modal-footer border-0">
+                    <a id="pdfDownloadLink" href="#" download class="btn btn-primary">
+                        <i class="fas fa-download me-2"></i> Download Full PDF
+                    </a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    function showPdfModal(pdfUrl) {
+        const modal = new bootstrap.Modal(document.getElementById('pdfModal'));
+        
+        // Set iframe source
+        document.getElementById('pdfFrame').src = pdfUrl;
+        
+        // Set download link
+        document.getElementById('pdfDownloadLink').href = pdfUrl;
+        
+        // Optional: You can make the title dynamic later
+        modal.show();
+    }
+
+    // Optional: Clear iframe when modal is closed (prevents old PDF from showing)
+    document.getElementById('pdfModal').addEventListener('hidden.bs.modal', function () {
+        document.getElementById('pdfFrame').src = '';
+    });
+    </script>
+
+	<script>
+        // Simple scroll animation for hero chevron
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
